@@ -3,18 +3,33 @@
 
 <head>
 
+<meta charset="UTF-8">
+
 <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 
-<title>Realizar pedido</title>
+<title>Realizar pedido | SIGPET</title>
+
 </head>
 
 <body>
 
+<header>
+
+<h1>SIGPET</h1>
+
+<nav>
 <a href="/">Inicio</a>
 <a href="/menu">Menú</a>
 <a href="/consultar">Consultar pedido</a>
+</nav>
 
-<h1>Realizar pedido</h1>
+</header>
+
+<main>
+
+<div class="card">
+
+<h2>Realizar pedido</h2>
 
 <form action="/confirmacion" method="post">
 
@@ -37,13 +52,23 @@
 <br><br>
 
 <label>Cantidad:</label>
-<input type="number" name="cantidad" min="1">
+<input type="number" name="cantidad" min="1" required>
 
 <br><br>
 
-<button type="submit">Enviar pedido</button>
+<button type="submit" class="btn-principal">Enviar pedido</button>
 
 </form>
+
+</div>
+
+</main>
+
+<footer>
+
+<p>SIGPET — Sistema de gestión de pedidos</p>
+
+</footer>
 
 </body>
 

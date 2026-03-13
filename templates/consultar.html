@@ -4,21 +4,39 @@
 <head>
 
 <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    
+
 <title>Consultar pedido</title>
+
 </head>
 
 <body>
 
+<header>
+
+<h2>SIGPET</h2>
+
+<nav>
 <a href="/">Inicio</a>
 <a href="/menu">Menú</a>
 <a href="/consultar">Consultar pedido</a>
+<a href="/cocina">Cocina</a>
+</nav>
+
+</header>
+
+
+<main>
+
+<div class="card">
 
 <h1>Consultar pedido</h1>
 
 <form action="/buscar_pedido" method="post">
 
 <label>Número de pedido:</label>
+
+<br><br>
+
 <input type="number" name="numero_pedido" required>
 
 <br><br>
@@ -26,6 +44,17 @@
 <button type="submit">Buscar</button>
 
 </form>
+
+</div>
+
+</main>
+
+
+<footer>
+
+<p>SIGPET - Sistema de pedidos en línea</p>
+
+</footer>
 
 </body>
 

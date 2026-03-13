@@ -6,41 +6,71 @@
 <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 
 <title>Pedido confirmado</title>
+
 </head>
 
 <body>
 
+<header>
+
+<h2>SIGPET</h2>
+
+<nav>
 <a href="/">Inicio</a>
 <a href="/menu">Menú</a>
 <a href="/consultar">Consultar pedido</a>
-    
+<a href="/cocina">Cocina</a>
+</nav>
+
+</header>
+
+
+<main>
+
+<div class="card">
+
 <h1>Pedido registrado</h1>
 
-<h2>Tu número de pedido es:</h2>
+<p>Tu número de pedido es:</p>
 
-<h1 style="font-size:70px;color:red;">
+<h1 class="numero-pedido">
 #{{numero_pedido}}
 </h1>
 
-<p>Tiempo estimado: {{tiempo_estimado}} minutos</p>
+<p><strong>Tiempo estimado:</strong> {{tiempo_estimado}} minutos</p>
 
-<p>Hora del pedido: {{hora}}</p>
+<p><strong>Hora del pedido:</strong> {{hora}}</p>
 
-<p>Nombre: {{nombre}}</p>
+<p><strong>Nombre:</strong> {{nombre}}</p>
 
-<p>Platillo: {{platillo}}</p>
+<p><strong>Platillo:</strong> {{platillo}}</p>
 
-<p>Cantidad: {{cantidad}}</p>
+<p><strong>Cantidad:</strong> {{cantidad}}</p>
 
 <p>Muestra este número al llegar al local.</p>
 
-<a href="/">Volver al inicio</a>
+<br>
+
+<a href="/">
+<button>Volver al inicio</button>
+</a>
 
 <br><br>
 
 <a href="/menu">
 <button>Hacer otro pedido</button>
 </a>
+
+</div>
+
+</main>
+
+
+<footer>
+
+<p>SIGPET - Sistema de pedidos en línea</p>
+
+</footer>
 
 </body>
 

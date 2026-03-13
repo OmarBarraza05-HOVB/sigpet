@@ -3,29 +3,72 @@
 
 <head>
 
+<meta charset="UTF-8">
+
 <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 
-<title>Menú</title>
+<title>Menú | SIGPET</title>
+
 </head>
 
 <body>
 
+<header>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<h2>SIGPET</h2>
+
+<nav>
 <a href="/">Inicio</a>
 <a href="/menu">Menú</a>
 <a href="/consultar">Consultar pedido</a>
+<a href="/cocina">Cocina</a>
+</nav>
 
-<h1>Menú</h1>
+</header>
 
-<p>Tacos — $25</p>
-<p>Hamburguesa — $80</p>
-<p>Hotdog — $35</p>
-<p>Refresco — $20</p>
+<main>
+
+<div class="card">
+
+<h2>Menú disponible</h2>
+
+<div class="menu-item">
+<span>Tacos</span>
+<span>$25</span>
+</div>
+
+<div class="menu-item">
+<span>Hamburguesa</span>
+<span>$80</span>
+</div>
+
+<div class="menu-item">
+<span>Hotdog</span>
+<span>$35</span>
+</div>
+
+<div class="menu-item">
+<span>Refresco</span>
+<span>$20</span>
+</div>
 
 <br>
 
 <a href="/pedido">
-<button>Realizar pedido</button>
+<button class="btn-principal">Realizar pedido</button>
 </a>
+
+</div>
+
+</main>
+
+<footer>
+
+<p>SIGPET — Sistema de gestión de pedidos</p>
+
+</footer>
 
 </body>
 

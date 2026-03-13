@@ -3,26 +3,58 @@
 
 <head>
 
+<meta charset="UTF-8">
+
 <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 
-<title>Opciones</title>
+<title>Opciones | SIGPET</title>
+
 </head>
 
 <body>
 
-<h1>Opciones</h1>
+<header>
+
+<h1>SIGPET</h1>
+
+<nav>
+<a href="/">Inicio</a>
+<a href="/menu">Menú</a>
+<a href="/consultar">Consultar pedido</a>
+<a href="/cocina">Cocina</a>
+</nav>
+
+</header>
+
+<main>
+
+<div class="card">
+
+<h2>Opciones</h2>
 
 <p>Selecciona una opción</p>
 
+<br>
+
 <a href="/menu">
-<button>Ver menú</button>
+<button class="btn-principal">Ver menú</button>
 </a>
 
 <br><br>
 
 <a href="/pedido">
-<button>Realizar pedido</button>
+<button class="btn-principal">Realizar pedido</button>
 </a>
+
+</div>
+
+</main>
+
+<footer>
+
+<p>SIGPET — Sistema de gestión de pedidos</p>
+
+</footer>
 
 </body>
 

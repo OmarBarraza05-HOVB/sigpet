@@ -1,18 +1,166 @@
 body{
-font-family: Arial;
+font-family: Arial, sans-serif;
+margin:0;
 background:#f4f4f4;
+
+min-height:100vh;
+
+display:flex;
+flex-direction:column;
+}
+
+/* HEADER */
+
+header{
+background:#0d3b78;
+color:white;
+text-align:center;
+padding:15px;
+}
+
+nav a{
+color:white;
+margin:0 12px;
+text-decoration:none;
+font-weight:bold;
+}
+
+/* CONTENIDO */
+
+main{
+flex:1;
+
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:flex-start;
+
+padding:30px;
+}
+
+/* TARJETA */
+
+.card{
+background:white;
+padding:40px;
+border-radius:12px;
+box-shadow:0px 6px 15px rgba(0,0,0,0.15);
+width:420px;
 text-align:center;
 }
 
+/* BOTON */
+
 button{
-background:#ff6600;
+background:#f48c46;
 color:white;
 border:none;
-padding:10px 20px;
-border-radius:5px;
+padding:12px 25px;
+border-radius:6px;
+font-size:16px;
 cursor:pointer;
 }
 
 button:hover{
-background:#e55c00;
+background:#e37730;
+}
+
+/* FOOTER */
+
+footer{
+background:#2aa6a4;
+color:white;
+text-align:center;
+padding:12px;
+
+width:100%;
+}
+
+/* TITULO COCINA */
+
+.titulo-cocina{
+text-align:center;
+margin-top:30px;
+font-size:32px;
+}
+
+/* CONTENEDOR DE PEDIDOS */
+
+.panel-cocina{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:25px;
+padding:30px;
+}
+
+/* TARJETAS DE PEDIDOS */
+
+.pedido-card{
+background:white;
+padding:20px;
+width:260px;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,0.2);
+text-align:left;
+}
+
+/* TITULO DE PEDIDO */
+
+.pedido-card h3{
+margin-top:0;
+color:#0d3b78;
+}
+
+/* ESTADO */
+
+.estado{
+font-weight:bold;
+margin-top:10px;
+}
+
+/* BOTONES DE COCINA */
+
+.botones-cocina{
+margin-top:15px;
+display:flex;
+flex-direction:column;
+gap:8px;
+}
+
+.botones-cocina button{
+background:#f48c46;
+color:white;
+border:none;
+padding:8px;
+border-radius:5px;
+cursor:pointer;
+}
+
+.botones-cocina button:hover{
+background:#e37730;
+}
+
+.menu-item{
+display:flex;
+justify-content:space-between;
+padding:18px 10px;
+border-bottom:1px solid #e0e0e0;
+font-size:20px;
+}
+
+.card h2{
+margin-bottom:25px;
+font-size:28px;
+}
+
+.btn-principal{
+margin-top:25px;
+background:#f48c46;
+color:white;
+border:none;
+padding:14px 26px;
+font-size:17px;
+border-radius:6px;
+cursor:pointer;
 }

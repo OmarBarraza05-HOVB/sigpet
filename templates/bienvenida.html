@@ -1,17 +1,23 @@
-<!DOCTYPE html>
-<html>
+<body>
 
-<head>
+<header>
 
 <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 
-<title>SIGPET</title>
+<h2>SIGPET</h2>
 
-</head>
+<nav>
+<a href="/">Inicio</a>
+<a href="/menu">Menú</a>
+<a href="/consultar">Consultar pedido</a>
+<a href="/cocina">Cocina</a>
+</nav>
 
-<body>
+</header>
 
-<div class="container">
+<main>
+
+<div class="card">
 
 <h1>Bienvenido a SIGPET</h1>
 
@@ -23,6 +29,12 @@
 
 </div>
 
-</body>
+</main>
 
-</html>
+<footer>
+
+<p>SIGPET - Sistema de pedidos en línea</p>
+
+</footer>
+
+</body>

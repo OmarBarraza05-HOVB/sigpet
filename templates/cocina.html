@@ -4,58 +4,84 @@
 <head>
 
 <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<meta http-equiv="refresh" content="5">
 
-    <meta http-equiv="refresh" content="5">
 <title>Panel de cocina</title>
+
 </head>
 
 <body>
 
+<header>
+
+<h2>SIGPET</h2>
+
+<nav>
 <a href="/">Inicio</a>
 <a href="/menu">Menú</a>
 <a href="/consultar">Consultar pedido</a>
+<a href="/cocina">Cocina</a>
+</nav>
 
-<h1>Pedidos actuales</h1>
+</header>
+
+
+<main>
+
+<h1 class="titulo-cocina">Pedidos actuales</h1>
+
+<div class="panel-cocina">
 
 {% if pedidos %}
 
 {% for pedido in pedidos %}
 
-<hr>
+<div class="pedido-card">
 
-<p><strong>Pedido #{{pedido[0]}}</strong></p>
+<h3>Pedido #{{pedido[0]}}</h3>
 
-<p>Nombre: {{pedido[1]}}</p>
+<p><strong>Nombre:</strong> {{pedido[1]}}</p>
 
-<p>Platillo: {{pedido[2]}}</p>
+<p><strong>Platillo:</strong> {{pedido[2]}}</p>
 
-<p>Cantidad: {{pedido[3]}}</p>
+<p><strong>Cantidad:</strong> {{pedido[3]}}</p>
 
-<p>Tiempo estimado: {{pedido[5]}} minutos</p>
+<p><strong>Tiempo:</strong> {{pedido[5]}} min</p>
 
-<p>Estado: {{pedido[4]}}</p>
+<p class="estado">Estado: {{pedido[4]}}</p>
 
 <form action="/cambiar_estado/{{pedido[0]}}" method="post">
 
+<div class="botones-cocina">
+
 <button name="estado" value="Preparando">Preparando</button>
-
 <button name="estado" value="Listo">Listo</button>
-
 <button name="estado" value="Entregado">Entregado</button>
 
+</div>
+
 </form>
+
+</div>
 
 {% endfor %}
 
 {% else %}
+
 <p>No hay pedidos pendientes.</p>
+
 {% endif %}
 
-<script>
-setInterval(function(){
-location.reload();
-},5000);
-</script>
+</div>
+
+</main>
+
+
+<footer>
+
+<p>SIGPET - Sistema de pedidos en línea</p>
+
+</footer>
 
 </body>
 
