@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <meta http-equiv="refresh" content="5">
+<title>Panel de cocina</title>
+</head>
+
+<body>
+
+<a href="/">Inicio</a>
+<a href="/menu">Menú</a>
+<a href="/consultar">Consultar pedido</a>
+
+<h1>Pedidos actuales</h1>
+
+{% if pedidos %}
+
+{% for pedido in pedidos %}
+
+<hr>
+
+<p><strong>Pedido #{{pedido[0]}}</strong></p>
+
+<p>Nombre: {{pedido[1]}}</p>
+
+<p>Platillo: {{pedido[2]}}</p>
+
+<p>Cantidad: {{pedido[3]}}</p>
+
+<p>Tiempo estimado: {{pedido[5]}} minutos</p>
+
+<p>Estado: {{pedido[4]}}</p>
+
+<form action="/cambiar_estado/{{pedido[0]}}" method="post">
+
+<button name="estado" value="Preparando">Preparando</button>
+
+<button name="estado" value="Listo">Listo</button>
+
+<button name="estado" value="Entregado">Entregado</button>
+
+</form>
+
+{% endfor %}
+
+{% else %}
+<p>No hay pedidos pendientes.</p>
+{% endif %}
+
+<script>
+setInterval(function(){
+location.reload();
+},5000);
+</script>
+
+</body>
+
+</html>

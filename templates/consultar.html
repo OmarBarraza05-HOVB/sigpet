@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    
+<title>Consultar pedido</title>
+</head>
+
+<body>
+
+<a href="/">Inicio</a>
+<a href="/menu">Menú</a>
+<a href="/consultar">Consultar pedido</a>
+
+<h1>Consultar pedido</h1>
+
+<form action="/buscar_pedido" method="post">
+
+<label>Número de pedido:</label>
+<input type="number" name="numero_pedido" required>
+
+<br><br>
+
+<button type="submit">Buscar</button>
+
+</form>
+
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<title>Estado del pedido</title>
+</head>
+
+<body>
+
+<a href="/">Inicio</a>
+<a href="/menu">Menú</a>
+<a href="/consultar">Consultar pedido</a>
+
+<h1>Estado del pedido</h1>
+
+{% if pedido %}
+
+<p><strong>Pedido #{{pedido[0]}}</strong></p>
+
+<p>Nombre: {{pedido[1]}}</p>
+
+<p>Platillo: {{pedido[2]}}</p>
+
+<p>Cantidad: {{pedido[3]}}</p>
+
+<p>Estado: <span id="estado">{{pedido[4]}}</span></p>
+
+<p>Tiempo estimado: {{pedido[5]}} minutos</p>
+
+{% else %}
+
+<p>No se encontró el pedido.</p>
+
+<a href="/consultar">Intentar nuevamente</a>
+
+{% endif %}
+
+<script>
+
+function actualizarEstado(){
+
+fetch("/estado/{{pedido[0]}}")
+.then(response => response.json())
+.then(data => {
+
+document.getElementById("estado").innerText = data.estado;
+
+});
+
+}
+
+setInterval(actualizarEstado, 5000);
+
+</script>
+
+</body>
+
+</html>
