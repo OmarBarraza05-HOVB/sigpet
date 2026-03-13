@@ -3,9 +3,12 @@
 
 <head>
 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 
-<title>Consultar pedido</title>
+<title>Consultar pedido | SIGPET</title>
 
 </head>
 
@@ -13,7 +16,7 @@
 
 <header>
 
-<h2>SIGPET</h2>
+<h1>SIGPET</h1>
 
 <nav>
 <a href="/">Inicio</a>
@@ -29,19 +32,21 @@
 
 <div class="card">
 
-<h1>Consultar pedido</h1>
+<h2>Consultar pedido</h2>
+
+<p>Ingresa el número de tu pedido</p>
 
 <form action="/buscar_pedido" method="post">
 
-<label>Número de pedido:</label>
-
-<br><br>
+<label>Número de pedido</label>
 
 <input type="number" name="numero_pedido" required>
 
 <br><br>
 
-<button type="submit">Buscar</button>
+<button type="submit" class="btn-principal">
+Buscar pedido
+</button>
 
 </form>
 
@@ -52,7 +57,7 @@
 
 <footer>
 
-<p>SIGPET - Sistema de pedidos en línea</p>
+<p>SIGPET — Sistema de pedidos en línea</p>
 
 </footer>
 
